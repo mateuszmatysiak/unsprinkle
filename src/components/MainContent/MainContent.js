@@ -1,10 +1,10 @@
-import React from 'react';
-import styled from 'styled-components/macro';
+import React from "react";
+import styled from "styled-components/macro";
 
-import data from '../../data';
-import MaxWidthWrapper from '../MaxWidthWrapper';
-import PhotoGridItem from '../PhotoGridItem';
-import VisuallyHidden from '../VisuallyHidden';
+import data from "../../data";
+import MaxWidthWrapper from "../MaxWidthWrapper";
+import PhotoGridItem from "../PhotoGridItem";
+import VisuallyHidden from "../VisuallyHidden";
 
 const MainContent = () => {
   return (
@@ -13,13 +13,7 @@ const MainContent = () => {
         <h1>All Photos</h1>
       </VisuallyHidden>
       {data.map(({ id, src, alt, tags }) => (
-        <PhotoGridItem
-          key={id}
-          id={id}
-          src={src}
-          alt={alt}
-          tags={tags}
-        />
+        <PhotoGridItem key={id} id={id} src={src} alt={alt} tags={tags} />
       ))}
     </Wrapper>
   );
